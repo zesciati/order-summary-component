@@ -1,0 +1,57 @@
+$colorBackground: grey;
+$blue-50: oklch(0.9774 0.0105 271.31);
+$blue-100: oklch(0.9323 0.0322 271.06);
+$blue-700: oklch(0.455 0.2558 273.12);
+$blue-950: oklch(0.3125 0.074 266.01);
+$gray-600: oklch(0.603 0.0615 269.01);
+
+@use "../../node_modules/utopia-core-scss/src/utopia" as utopia;
+
+/* @link https://utopia.fyi/type/calculator?c=375,14,1.2,1440,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  @include utopia.generateTypeScale(
+    (
+      "minWidth": 375,
+      "maxWidth": 1440,
+      "minFontSize": 14,
+      "maxFontSize": 24,
+      "minTypeScale": 1.2,
+      "maxTypeScale": 1.25,
+      "positiveSteps": 5,
+      "negativeSteps": 2,
+      "prefix": "step-",
+      "relativeTo": "viewport-width"
+    )
+  );
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: $blue-100;
+}
+
+body::before {
+  background-image: url(../../images/pattern-background-mobile.svg);
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 35%;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // background: $blue-100;
+}
+
+main {
+  @include flexCenter();
+  min-height: 100vh;
+}
