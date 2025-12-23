@@ -63,6 +63,7 @@ html {
 body {
   background-color: $blue-100;
   font-family: $font-redhat;
+  font-size: $step-1;
 }
 
 body::before {
@@ -101,24 +102,28 @@ main {
     p:first-of-type {
       padding-inline: $space-xl-2xl;
     }
+
     div {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
       background-color: $blue-100;
-      margin-inline: 0.54rem;
-      // padding-inline:2rem ;
+      margin-inline: 1rem;
       border-radius: 15px;
-
       div {
         display: flex;
-        justify-content: start;
+        padding-block: $space-s;
+        color: $gray-600;
         img {
-          width: 17%;
-          max-width: 17%;
+          padding-right: $space-xs;
         }
-        p {
-          padding-top: 1rem;
+        span {
+          font-weight: 700;
+          width: 178%;
+          max-width: 178%;
+          span{
+            font-weight: 400;
+          }
         }
       }
 
@@ -126,6 +131,7 @@ main {
         color: $blue-700;
         font-weight: 800;
         text-decoration: underline;
+        padding-right: $space-s;
       }
     }
 
@@ -133,8 +139,8 @@ main {
       background-color: $blue-700;
       color: $blue-100;
       margin-block: $space-m;
-      width: 90%;
-      max-width: 90%;
+      width: 87%;
+      max-width: 87%;
       padding-block: $space-xs;
       border-style: none;
       border-radius: $space-2xs;
