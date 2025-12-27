@@ -4,3 +4,5 @@
 - akan muncul konten thank you
 */
 
+const thank = document.getElementsByClassName("thank-you");
+

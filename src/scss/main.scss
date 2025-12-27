@@ -164,6 +164,18 @@ main {
       font-weight: 800;
     }
   }
+
+  .thank-you {
+    background-color: $blue-50;
+
+    button{
+      margin-block: 0;
+      margin-bottom: 20px;
+    }
+    .thank {
+      padding-block: $space-s;
+    }
+  }
 }
 
 @media (min-width: $breakpoint-480) {
