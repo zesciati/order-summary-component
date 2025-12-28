@@ -33,8 +33,9 @@ function toThank() {
 
 
 window.addEventListener("DOMContentLoaded", () => {
- 
 
+  thankYou.classList.add("hidden");
+  order.classList.remove("hidden");
 
   const state = localStorage.getItem("pageState");
 
@@ -46,6 +47,5 @@ window.addEventListener("DOMContentLoaded", () => {
     thankYou.classList.add("hidden");
 
   }
-
 
 });
