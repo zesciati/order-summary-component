@@ -33,18 +33,17 @@ function toThank() {
 
 
 window.addEventListener("DOMContentLoaded", () => {
-  thankYou.classList.add("hidden");
-  order.classList.remove("hidden");
+ 
 
 
   const state = localStorage.getItem("pageState");
 
-  if (state === "order") {
-    thankYou.classList.add("hidden");
-    order.classList.remove("hidden");
-  } else {
-    order.classList.add("hidden");
+  if (state === "thank") {
     thankYou.classList.remove("hidden");
+    order.classList.add("hidden");
+  } else {
+    order.classList.remove("hidden");
+    thankYou.classList.add("hidden");
 
   }
 
